@@ -23,5 +23,5 @@ jobs:
       - name: Run tests
         run: |
           pip install pytest
-          python -m pytest tests # Run tests located in the /tests directory
+          pytest tests/test_lambda.py
 

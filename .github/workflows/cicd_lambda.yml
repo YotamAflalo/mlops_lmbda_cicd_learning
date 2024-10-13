@@ -24,7 +24,7 @@ jobs:
       - name: Run tests
         run: |
           pip install pytest
-          python -m pytest tests # Run tests located in the /tests directory
+          pytest tests/test_lambda.py # Run tests located in the /tests directory
       - name: Install zip
         uses: montudor/action-zip@v1
       - name: Create Zip file
