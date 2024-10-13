@@ -40,7 +40,7 @@ jobs:
       - name: Notify via SNS
         if: always() # Ensures notification is sent regardless of job success or failure
         run: |
-          aws sns publish --topic-arn arn:aws:sns:us-east-1:204597968057:yotam-lambda:DeploymentNotifications --message "Deployment status of ${{ github.repository }}: ${{ job.status }}"
+          aws sns publish --topic-arn arn:aws:sns:us-east-1:204597968057:yotam-lambda --message "Deployment status of ${{ github.repository }}: ${{ job.status }}"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
